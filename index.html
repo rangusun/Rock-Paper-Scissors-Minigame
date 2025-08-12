@@ -1,37 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="description" content="A web rock-paper-scissors minigame made using HTML, CSS, and Javascript ">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
 
-  Score
-  Rules
+  <body>
 
-  You Picked
-  The House Picked
+    <!-- 
+    Score
+    Rules
 
-  You Win
-  You Lose
+    You Picked
+    The House Picked
 
-  Play Again
+    You Win
+    You Lose
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    Play Again
 
+    <div>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <header>
+      <img src="images/logo.svg" alt="A logo containing the words Rock Paper Scissors">
+      <div id="scoreDisplay">
+        <h1>SCORE</h1>
+        <p id="score">0</p>
+      </div>
+    </header>
+
+    <main>
+      <div id="decisionContainer">
+        <div>
+          <button onclick="showResults(paper)">
+            <img src="images/icon-paper.svg" alt="Image of a hand in the form of the Paper gesture">
+          </button>
+          <button onclick="showResults(scissors)">
+            <img src="images/icon-scissors.svg" alt="Image of a hand in the form of the Scissors gesture">
+          </button>
+        </div>
+        <div>
+          <button onclick="showResults(rock)">
+            <img src="images/icon-rock.svg" alt="Image of a hand in the form of the Rock gesture">
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div id="resultContainer">
+      <div id="playerResultContainer">
+        <p>YOU PICKED</p>
+        <img id="playerResultIcon" src="">
+      </div>
+      <div id="resultDisplayContainer">
+        <p id="resultText"></p>
+        <button onclick="playAgain()">Play Again</button>
+      </div>
+      <div id="computerResultContainer">
+        <p>THE HOUSE PICKED</p>
+        <img id="computerResultIcon" src="">
+      </div>
+    </div>
+    
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
