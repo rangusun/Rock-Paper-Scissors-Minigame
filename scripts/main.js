@@ -54,7 +54,8 @@ function showResults(playerChoice) {
     decisionContainer.style.display = "none";
 
     // Show "Results" screen
-    resultContainer.style.display = "contents";
+    resultContainer.style.display = "flex";
+    resultContainer.style.justifyContent = "center";
 }
 
 function computerRPSPick() {
@@ -83,6 +84,9 @@ function compareChoices(playerPick, computerChoice) {
         playerScore += 1;
         return "WIN";
     } else if (playerPick.weakAgainst == computerChoice.type) {
+        if (playerScore != 0) {
+            playerScore -= 1;
+        }
         return "LOSE";
     }
 }
